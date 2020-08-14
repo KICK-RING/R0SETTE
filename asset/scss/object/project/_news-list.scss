@@ -1,0 +1,35 @@
+// main: ../../app.scss
+
+.p-news-list {
+    &__item {
+        margin-top: 20px;
+        padding-bottom: 18px;
+        border-bottom: 1px solid $border-color;
+        @include flex();
+
+        &-date {
+            font-family: $theme-font-family;
+            font-weight: 400;
+        }
+        &-new {
+            background: $theme-color;
+            color: #fff;
+            font-family: $theme-font-family;
+            font-size: .75rem;
+            padding: 8px 12px 5px;
+            margin: -6px 0 0 10px;
+            border-radius: 20px;
+        }
+        &-ttl {
+            margin-top: 8px;
+            width: 100%;
+            line-height: 1.3;
+
+            a {
+                color: $default-font-color;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {}

@@ -1,0 +1,119 @@
+// main: ../../app.scss
+
+.p-disco {
+    &__ttl {
+    }
+
+    &__wrap {
+    }
+
+    &__cont {
+        margin-top: 40px;
+    }
+
+    &__img {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    &__desc{
+    }
+
+    &__date {
+        font-family: $theme-font-family;
+        font-size: 1.5rem;
+        margin: 20px 0 6px;
+    }
+
+    &__album-ttl {
+        font-weight: 600;
+        margin: 12px 0 10px;
+        font-size: 1.25rem;
+    }
+
+    &__item {
+        line-height: 1.9;
+    }
+
+    &__btn {
+        width: 315px;
+        margin: 20px auto 0;
+        @include flex();
+
+        &-item {
+            font-family: $theme-font-family;
+            font-size: 1.15rem;
+            background: $theme-color;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0 11px;
+            border-radius: 30px;
+            width: 150px;
+            margin-left: 15px;
+
+            &:nth-child(1) {
+                margin-left: 0;
+            }
+
+            img {
+                width: 18px;
+                margin: 0 6px 2px 0;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+}
+@include media-breakpoint-up(lg) {
+    .p-disco {
+        &__ttl {
+            width: 330px;
+            margin: 20px 0 0;
+        }
+
+        &__wrap {
+            width: 650px;
+        }
+
+        &__cont {
+            @include flex();
+
+            &:nth-child(1) {
+                margin-top: 0;
+            }
+        }
+
+        &__img {
+            width: 315px;
+            margin: 0 20px 0 0;
+        }
+
+        &__desc {
+            width: 315px;
+        }
+
+        &__date {
+        }
+
+        &__album-ttl {
+        }
+
+        &__item {
+        }
+
+        &__btn {
+            margin: 20px 0 0;
+
+            &-item {
+                &:nth-child(1) {
+                }
+
+                img {
+                }
+            }
+        }
+    }
+}
+@include media-breakpoint-up(xl) {
+}

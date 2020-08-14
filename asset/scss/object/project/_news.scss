@@ -1,0 +1,27 @@
+// main: ../../app.scss
+
+.p-news {
+    &__ttl {
+
+    }
+
+    &__wrap {
+
+    }
+}
+
+@include media-breakpoint-up(md) {
+}
+@include media-breakpoint-up(lg) {
+    .p-news {
+        &__ttl {
+            width: 400px;
+            margin: 20px 0 0;
+        }
+        &__wrap {
+            width: 540px;
+        }
+    }
+}
+@include media-breakpoint-up(xl) {
+}

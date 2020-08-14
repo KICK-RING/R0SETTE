@@ -1,0 +1,18 @@
+// main: ../../app.scss
+
+.p-ttl {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    @include theme-font();
+    position: relative;
+
+    &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+        width: 60px;
+        height: 2px;
+        background: $theme-color;
+    }
+}

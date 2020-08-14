@@ -1,0 +1,22 @@
+// main: ../../app.scss
+
+/**
+ * Theme Settings
+**/
+
+$theme-font-family: "Josefin Sans", sans-serif;
+$theme-font-weight: 400;
+$theme-font-letter-spacing: .1em;
+
+$theme-color: #f59ca8;
+$sub-color: #fdd5d7;
+$theme-bg-color: #f8f8f8;
+$default-font-color: #333;
+$border-color: #dbdbdb;
+//$theme-gradation: linear-gradient(45deg, rgb(248, 188, 79) 0%,rgb(211, 21, 87) 100%);
+
+$transition: .3s;
+$opacity: .5;
+
+$sp-container: 90%;
+$container: 980px;

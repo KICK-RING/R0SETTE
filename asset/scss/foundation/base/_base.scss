@@ -1,0 +1,27 @@
+// main: ../../app.scss
+body {
+    font-size: .75rem;
+    font-weight: 500;
+    letter-spacing: .1em;
+    margin: 0;
+    color: $default-font-color;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+    vertical-align: bottom;
+}
+
+a {
+    text-decoration: none;
+}
+
+@include media-breakpoint-up(lg) {
+
+    body {
+        font-size: .875rem;
+        font-weight: 400;
+    }
+}

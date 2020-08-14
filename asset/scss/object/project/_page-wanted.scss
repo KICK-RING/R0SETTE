@@ -1,0 +1,75 @@
+.p-page-wanted {
+
+    .wpcf7 {
+        margin-top: 2rem;
+    }
+
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+
+    .form-control {
+        border: none;
+        border-radius: 0;
+        background: #333;
+        color: inherit;
+    }
+
+    .form-control::-webkit-input-placeholder {
+        color: #999;
+    }
+
+    .form-control::-moz-placeholder {
+        color: #999;
+        opacity: 1;
+    }
+
+    .form-control:-ms-input-placeholder {
+        color: #999;
+    }
+
+    .custom-file-input {
+        cursor: pointer;
+    }
+
+    .custom-file-label {
+        border: none;
+        border-radius: 0;
+        background: #333;
+        color: #999;
+        font-size: 1rem;
+        font-weight: 400;
+        letter-spacing: 0;
+    }
+
+    .custom-file-label::after {
+        border-left-color: #999;
+        border-radius: 0;
+        background: #444;
+        color: #999;
+        height: 100%;
+    }
+
+
+    .wpcf7-textarea {
+        height: 10em;
+    }
+}
+@include media-breakpoint-up(md) {
+    .p-page-wanted {
+
+
+        .col-form-label {
+            padding-top: .25rem;
+            padding-bottom: .25rem;
+        }
+
+        .p-page__content {
+            max-width: 520px;
+        }
+    }
+}
+@include media-breakpoint-up(lg) {
+}
+@include media-breakpoint-up(xl) {
+}

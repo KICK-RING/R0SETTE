@@ -1,0 +1,108 @@
+// main: ../../app.scss
+@keyframes scroll-floating {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(0, -1rem, 0);
+    }
+}
+
+.p-page-home {
+    font-size: 1rem;
+
+    &--kv {
+    }
+
+    &--movie {
+        margin-top: 10px;
+
+        &__item {
+        }
+    }
+
+    &--news {
+    }
+
+    &--disco {
+        background: $theme-bg-color;
+    }
+
+    &--profile {
+        &__wrap {
+        }
+
+        &__desc {
+        }
+
+        &__ttl {
+        }
+
+        &__comment {
+            font-size: 1rem;
+            line-height: 1.5;
+            margin-bottom: 16px;
+        }
+
+        &__img {
+        }
+
+        &__member {
+            @include flex();
+        }
+    }
+}
+@include media-breakpoint-up(md) {
+}
+@include media-breakpoint-up(lg) {
+    .p-page-home {
+        font-size: 1.25rem;
+
+        &--kv {
+        }
+
+        &--movie {
+            margin-top: 40px;
+
+            &__item {
+            }
+        }
+
+        &--news {
+        }
+
+        &--disco {
+        }
+
+        &--profile {
+            &__wrap {
+                flex-flow: row-reverse;
+                @include flex();
+            }
+
+            &__desc {
+                width: 400px;
+                margin-left: 40px;
+            }
+
+            &__ttl {
+                margin: 20px 0 40px;
+            }
+
+            &__comment {
+                line-height: 2.2;
+                width: 366px;
+            }
+
+            &__img {
+                width: 540px;
+            }
+
+            &__member {
+                @include flex();
+            }
+        }
+    }
+}
+@include media-breakpoint-up(xl) {
+}

@@ -1,0 +1,24 @@
+.p-page-works-archive {
+
+    &__creator {
+        margin-top: -.5rem;
+        margin-bottom: 1.5rem;
+        padding: 0 1.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        //align-items: center;
+        justify-content: center;
+        list-style: none;
+    }
+
+    &__creator-item {
+    }
+
+    &__creator-link {
+        padding: .5rem .75rem;
+        color: inherit;
+        //font-size: .875rem;
+        line-height: 1;
+        display: inline-block;
+    }
+}

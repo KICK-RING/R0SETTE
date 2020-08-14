@@ -1,0 +1,11 @@
+.p-container {
+    // フッター分を除いた高さ
+    min-height: calc(100vh - 3rem * 2 - .625rem);
+    position: relative;
+    overflow-x: hidden;
+}
+@include media-breakpoint-up(lg) {
+    .p-container {
+        min-height: 0;
+    }
+}

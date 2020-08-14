@@ -1,0 +1,25 @@
+// main: ../app.scss
+
+.l-header {
+    background-image: url('../img/header_bg.jpg');
+    background-size: cover;
+    background-position: 0 0;
+    padding: 20px 0 16px;
+
+    &--logo {
+        width: 44%;
+        max-width: 200px;
+        margin: 0 auto;
+    }
+}
+@include media-breakpoint-down(md) {
+}
+@include media-breakpoint-up(md) {
+}
+@include media-breakpoint-up(lg) {
+    .l-header {
+        padding: 40px 0 31px;
+    }
+}
+@include media-breakpoint-up(xl) {
+}

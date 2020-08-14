@@ -1,0 +1,10 @@
+.c-form {
+
+    &-required::after {
+        content: "*";
+        margin-left: .125rem;
+        color: $red;
+        font-weight: 700;
+        //font-size: .75em;
+    }
+}

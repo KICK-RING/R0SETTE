@@ -1,0 +1,94 @@
+.p-works {
+    //margin: .75rem;
+    //margin: -1.5rem -1.5rem 0;
+    //padding: 1.5rem;
+    //background: #fff;
+
+    &__heading {
+        margin-top: 1.5rem;
+        margin-bottom: .25rem;
+        font-size: .75rem;
+        letter-spacing: .2em;
+    }
+
+    &__eyecatch {
+        margin-bottom: 1.5rem;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__text {
+    }
+
+    &__title {
+        margin-bottom: .25rem;
+        font-size: 1.125rem;
+    }
+
+    &__artist {
+        margin-bottom: 1rem;
+    }
+
+    &__release-date {
+    }
+
+    &__content {
+        margin-bottom: 1rem;
+    }
+
+    &__creator {
+        margin-bottom: 0;
+        padding-left: 0;
+        list-style: none;
+    }
+}
+@include media-breakpoint-up(md) {}
+@include media-breakpoint-up(lg) {
+    .p-works {
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: space-between;
+        max-width: 960px;
+
+        &__heading {
+            //margin-top: 1.5rem;
+            //margin-bottom: .5rem;
+            //font-size: .875rem;
+            font-size: .875rem;
+        }
+
+        &__eyecatch {
+            margin-bottom: 0;
+            flex-basis: calc(100% / 2 - 1.5rem);
+        }
+
+        &__text {
+            flex-basis: calc(100% / 2 - 1.5rem);
+        }
+
+        &__title {
+            //margin-bottom: .25rem;
+            font-size: 1.25rem;
+        }
+
+        &__artist {
+            margin-bottom: 2rem;
+        }
+
+        &__release-date {
+        }
+
+        &__content {
+            margin-bottom: 2rem;
+        }
+
+        &__creator {
+            //padding-left: 0;
+            //list-style: none;
+        }
+    }
+}
+@include media-breakpoint-up(xl) {}

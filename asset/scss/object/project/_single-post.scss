@@ -1,0 +1,32 @@
+// main: ../../app.scss
+
+.p-single-post {
+    font-size: 1rem;
+
+    &__ttl {
+        line-height: 1.2;
+    }
+
+    &__cont {
+        line-height: 1.8;
+    }
+
+    &__back {
+        margin-top: 60px;
+
+        a {
+            color: $default-font-color;
+        }
+    }
+}
+@include media-breakpoint-up(md) {}
+@include media-breakpoint-up(lg) {
+    .p-single-post {
+        font-size: 1.25rem;
+
+        &__ttl {
+            line-height: 1.7;
+        }
+    }
+}
+@include media-breakpoint-up(xl) {}

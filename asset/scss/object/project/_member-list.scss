@@ -1,0 +1,97 @@
+// main: ../../app.scss
+
+.p-member-list {
+    &__item {
+        width: calc(100% / 3 - 10px);
+        margin-top: 24px;
+        margin-left: 15px;
+
+        &:nth-child(3n + 1) {
+            margin-left: 0;
+        }
+    }
+
+    &__photo {
+        position: relative;
+    }
+
+    &__name {
+        position: absolute;
+        width: 90%;
+        bottom: 6px;
+        left: 5%;
+        color: #fff;
+        background: $theme-color;
+        font-family: $theme-font-family;
+        text-align: center;
+        font-size: .5rem;
+        padding-top: 3px;
+        letter-spacing: 0;
+    }
+
+    &__sns {
+        display: table;
+        border-collapse: separate;
+        border-spacing: 12px 0;
+        margin: 10px auto 0;
+
+        &-item {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        &-twitter {
+            font-size: 1rem;
+            background: #000;
+            border-radius: 50%;
+            padding: 6px 4.5px 5px 6.5px;
+
+            a {
+                color: #fff;
+            }
+        }
+
+        &-instagram {
+            font-size: 1.75rem;
+
+            a {
+                color: $default-font-color;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .p-member-list {
+        &__item {
+            width: calc(100% / 6 - 10px);
+            margin-left: 12px;
+
+            &:nth-child(3n + 1) {
+                margin-left: 12px;
+            }
+
+            &:nth-child(1) {
+                margin-left: 0;
+            }
+        }
+
+        &__photo {}
+
+        &__name{
+            font-size: .85rem;
+            padding: 7px 0 5px;
+        }
+
+        &__sns {
+            &-item {
+            }
+
+            &-twitter {
+            }
+
+            &-instagram {
+            }
+        }
+    }
+}

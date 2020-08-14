@@ -1,0 +1,84 @@
+.p-page-about {
+
+    /**
+     * Common
+    **/
+    &__heading {
+        margin-bottom: 2rem;
+        @include theme-font;
+        font-size: 1rem;
+        letter-spacing: .2em;
+        text-align: center;
+    }
+
+    /**
+     * Philosophy
+    **/
+    &__philosophy {
+        padding: 2.5rem 0;
+        background: rgba(#fff, .05);
+
+        &-heading {
+            margin-bottom: 2rem;
+            @include theme-font;
+            font-size: 1.5rem;
+            font-weight: 700;
+            line-height: 2;
+            text-align: center;
+            /*
+            color: transparent;
+            background: url(../img/background-light_2.jpg) 50% 100% / cover no-repeat;
+            -webkit-background-clip: text;
+            background-clip: text;
+            */
+        }
+    }
+
+    /**
+     * Creator
+    **/
+    &__creator {
+        padding: 2.5rem 0;
+    }
+}
+@include media-breakpoint-up(md) {
+}
+@include media-breakpoint-up(lg) {
+    .p-page-about {
+
+        /**
+         * Common
+        **/
+        &__heading {
+            margin-bottom: 3rem;
+            font-size: 1.25rem;
+        }
+
+        /**
+         * Philosophy
+        **/
+        &__philosophy {
+            padding: 6rem 0;
+
+            &-heading {
+                margin-bottom: 3rem;
+                font-size: 3.5rem;
+                background-position: 50% 50%;
+                background-attachment: fixed;
+            }
+
+            &-description {
+                text-align: center;
+            }
+        }
+
+        /**
+         * Creator
+        **/
+        &__creator {
+            padding: 6rem 0;
+        }
+    }
+}
+@include media-breakpoint-up(xl) {
+}
