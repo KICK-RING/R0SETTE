@@ -23,11 +23,13 @@
         display: block;
         width: 3em;
         height: 3em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         &:hover:not(.current):not(.dots) {
             background: #fff;
             color: $theme-color;
-            //opacity: .5;
             text-decoration: none;
         }
 
@@ -61,6 +63,8 @@
 
         .page-numbers {
             @include transition;
+            width: 2em;
+            height: 2em;
         }
     }
 }

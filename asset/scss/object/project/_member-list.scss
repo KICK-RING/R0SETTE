@@ -76,7 +76,12 @@
             }
         }
 
-        &__photo {}
+        &__photo {
+            transition: $transition;
+            &:hover {
+                opacity: .7;
+            }
+        }
 
         &__name{
             font-size: .85rem;
@@ -88,9 +93,21 @@
             }
 
             &-twitter {
+                transition: $transition;
+
+                &:hover {
+                    background: $theme-color;
+                }
             }
 
             &-instagram {
+                i {
+                    transition: $transition;
+
+                    &:hover {
+                        color: $theme-color;
+                    }
+                }
             }
         }
     }

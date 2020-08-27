@@ -1,10 +1,81 @@
+// main: ../../app.scss
+
 .c-form {
+    &-item {
+        margin-bottom: 26px;
+    }
 
     &-required::after {
-        content: "*";
-        margin-left: .125rem;
-        color: $red;
+        content: "必須";
+        margin-left: 10px;
+        color: #fff;
+        background: $theme-color;
+        border-radius: 20px;
+        padding: 4px 10px;
         font-weight: 700;
-        //font-size: .75em;
+        font-size: .75em;
+    }
+
+    &-input {
+        margin-top: 12px;
+        width: 100%;
+
+        input,
+        textarea,
+        select {
+            width: calc(100% - 12px);
+            font-size: 16px;
+            padding: 3px 2px;
+        }
+
+        select {
+            width: calc(100% - 2px);
+        }
+    }
+
+    input[type="submit"] {
+        width: 260px;
+        font-size: 1.25rem;
+        text-align: center;
+        font-weight: 600;
+        padding: 10px 0;
+        display: block;
+        margin: 30px auto 0;
+        background: $theme-color;
+        color: #fff;
+        border: 2px solid $theme-color;
+        border-radius: 30px;
+        -webkit-appearance: none;
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .c-form {
+        &-item {
+        }
+
+        &-required::after {
+        }
+
+        &-input {
+
+            input,
+            textarea,
+            select {
+                font-size: 1.25rem;
+                padding: 6px 2px;
+            }
+        }
+
+        input[type="submit"] {
+            transition: $transition;
+
+            &:hover {
+                cursor: pointer;
+                background: #fff;
+                color: $theme-color;
+                transform: scale(1.05);
+            }
+        }
     }
 }

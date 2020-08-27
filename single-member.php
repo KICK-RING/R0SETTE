@@ -2,18 +2,12 @@
     get_header();
     the_post();
 
-    $works = get_posts([
-        'post_type' => 'works',
-        'tax_query' => [
-            [
-                'taxonomy' => 'creator',
-                'field'    => 'slug',
-                'terms'    => $post->post_name,
-            ],
-        ],
-        //'posts_per_page' => -1,
-    ]);
-
+    $postID = get_the_ID();
+    $args = array(
+        'exclude' => $postID,
+        'posts_per_page' => -1,//取得する件数。-1で全件取得
+        'post_type' => 'member',//取得する投稿タイプ
+    );
 
     //dd($post->post_author);
 ?>
@@ -68,20 +62,22 @@
                 <div class="p-single-member__topics-wrap">
                     <?php if(get_field('topics')): ?>
                     <?php while(the_repeater_field('topics')):?>
-                        <div class="p-single-member__topics-cont">
-                            <div class="p-single-member__topics-tag">
-                                <?= the_sub_field('tag'); ?>
-                            </div>
-                            <div class="p-single-member__topics-text">
-                                <?php if(get_sub_field('url')): ?>
-                                    <a href="<?= the_sub_field('url'); ?>" target="_blank">
-                                <?php endif; ?>
+                        <?php if(get_sub_field('url')): ?>
+                            <a class="p-single-member__topics-link" href="<?= the_sub_field('url'); ?>" <?= get_sub_field('blank')? ' target="_blank" ': ''; ?>>
+                        <?php endif; ?>
+
+                            <div class="p-single-member__topics-cont">
+                                <div class="p-single-member__topics-tag">
+                                    <?= the_sub_field('tag'); ?>
+                                </div>
+                                <div class="p-single-member__topics-text">
                                     <?= the_sub_field('title'); ?>
-                                <?php if(get_sub_field('url')): ?>
-                                    </a>
-                                <?php endif; ?>
+                                </div>
                             </div>
-                        </div>
+
+                        <?php if(get_sub_field('url')): ?>
+                            </a>
+                        <?php endif; ?>
                     <?php endwhile;?>
                     <?php endif; ?>
                     <?php wp_reset_postdata();?>
@@ -92,19 +88,16 @@
 
     <section class="p-single-member__pagination">
         <div class="p-page__conts">
-            <?php if (get_previous_post()):?>
-                <div class="p-single-member__pagination-prev">
+            <div class="p-single-member__list">
+                <?php $myposts = get_posts( $args );
+                    foreach ( $myposts as $post ) : setup_postdata( $post );
+                ?>
 
-                </div>
-            <?php endif; ?>
-            <a href="<?= get_bloginfo('url') ?>/member/" class="p-single-member__pagination-list">
-                LIST OF MEMBER
-            </a>
-            <?php if (get_next_post()):?>
-                <div class="p-single-member__pagination-next">
+                <?php get_template_part('_member-list__item'); ?>
 
-                </div>
-            <?php endif; ?>
+                <?php endforeach;
+                wp_reset_postdata();?>
+            </div>
         </div>
     </section>
 </div>

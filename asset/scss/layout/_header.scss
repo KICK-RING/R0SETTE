@@ -19,6 +19,13 @@
 @include media-breakpoint-up(lg) {
     .l-header {
         padding: 40px 0 31px;
+
+        &--logo {
+            transition: $transition;
+            &:hover {
+                opacity: .5;
+            }
+        }
     }
 }
 @include media-breakpoint-up(xl) {

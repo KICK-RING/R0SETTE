@@ -99,14 +99,18 @@ nav {
         transform: translateZ(0);
     }
 
-    li {
+    a {
+        display: block;
         text-align: center;
-        padding: 20px 0;
+        padding: 24px 0 20px;
         font-family: $theme-font-family;
         font-size: 1.25rem;
+        color: #fff;
+        transition: $transition;
 
-        a {
-            color: #fff;
+        &:hover {
+            background: #fff;
+            color: $theme-color;
         }
     }
 }
@@ -114,6 +118,7 @@ nav {
 @include media-breakpoint-up(md) {
 }
 @include media-breakpoint-up(lg) {
+
 }
 @include media-breakpoint-up(xl) {
 }

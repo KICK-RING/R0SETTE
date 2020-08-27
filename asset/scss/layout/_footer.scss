@@ -53,14 +53,16 @@
                 background: #fff;
                 font-size: 16px;
                 border-radius: 50%;
-                padding: 8px;
                 margin-left: 14px;
+                color: $theme-color;
+                width: 33px;
+                height: 35px;
+                text-align: center;
+                line-height: 35px;
+                padding-left: 2px;
+
                 &:nth-child(1) {
                     margin-left: 0;
-                }
-
-                a {
-                    color: $theme-color;
                 }
             }
         }
@@ -76,6 +78,12 @@
             &__btn {
                 font-size: 1.75rem;
                 padding: 30px 0 24px;
+                transition: $transition;
+
+                &:hover {
+                    box-shadow: 5px 5px 2px rgba(255, 255, 255, .5);
+                    transform: scale(1.05);
+                }
 
                 &-pc {
                     display: inline-block;
@@ -88,6 +96,10 @@
         &--cont {
 
             &__logo {
+                transition: $transition;
+                &:hover {
+                    opacity: .5;
+                }
             }
 
             &__nav {
@@ -96,6 +108,13 @@
                 margin: 50px 0;
                 @include flex();
                 justify-content: space-evenly;
+
+                li {
+                    transition: $transition;
+                    &:hover {
+                        opacity: .5;
+                    }
+                }
             }
 
             &__sns {
@@ -104,6 +123,12 @@
 
                 &-item {
                     margin-left: 28px;
+                    transition: $transition;
+
+                    &:hover {
+                        opacity: .5;
+                    }
+
                     &:nth-child(1) {
                     }
                 }

@@ -14,17 +14,16 @@
         <img src="<?= image('kv.jpg') ?>" alt="ROSETTE" title="ROSETTE">
     </section>
 
-    <!-- <section class="p-page-home--movie">
-        <div class="p-page-home--movie__item u-embed-youtube">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/YUGOXBgl87I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <div class="p-page-home--movie__item u-embed-youtube">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/x8VYWazR5mE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <div class="p-page-home--movie__item u-embed-youtube">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/ony539T074w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-    </section> -->
+    <section class="p-page-home--movie">
+        <?php if(get_field('youtube')): ?><? //固定ページ以外に表示したい場合は固定ページのIDを入れる　?>
+            <?php while(the_repeater_field('youtube')):?><? //固定ページ以外に表示したい場合は固定ページのIDを入れる　?>
+            <div class="p-page-home--movie__item u-embed-youtube">
+                <?= the_sub_field('embed'); ?>
+            </div>
+            <?php endwhile;?>
+        <?php endif; ?>
+        <?php wp_reset_postdata();?>
+    </section>
 
     <section class="p-page-home--news">
         <?= get_template_part('_news'); ?>

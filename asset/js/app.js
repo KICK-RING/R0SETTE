@@ -6,6 +6,59 @@
      * 機能群
     *************************************************/
 
+    // slick
+    $('.p-page-home--movie').slick({
+        dots: true,
+        infinite: true,
+        arrows: false,
+        swipe: true,
+        centerMode: true,
+        centerPadding: '30%',
+        responsive: [
+            {
+              breakpoint: 992,
+              settings: {
+                centerPadding: '0px',
+              }
+            }
+        ]
+    });
+
+    // navi
+    $('.menu-trigger').on('click',function(){
+        if($(this).hasClass('active')){
+            $(this).removeClass('active');
+            $('main').removeClass('open');
+            $('nav').removeClass('open');
+            $('.overlay').removeClass('open');
+        } else {
+            $(this).addClass('active');
+            $('main').addClass('open');
+            $('nav').addClass('open');
+            $('.overlay').addClass('open');
+        }
+    });
+
+    $('.overlay').on('click',function(){
+        if($(this).hasClass('open')){
+            $(this).removeClass('open');
+            $('.menu-trigger').removeClass('active');
+            $('main').removeClass('open');
+            $('nav').removeClass('open');
+        }
+    });
+
+    $('li > a').on('click',function(){
+        if($('.overlay').hasClass('open')){
+            $('.overlay').removeClass('open');
+            $('.menu-trigger').removeClass('active');
+            $('main').removeClass('open');
+            $('nav').removeClass('open');
+        }
+    });
+
+
+
     // GLOBAL 変数
     var ww = $(window).innerWidth();
     var wh = $(window).innerHeight();
@@ -178,17 +231,17 @@
     *************************************************/
 
     // 表示ページと同じ URL へのリンクはイベント削除
-    function removeSameUrlLinkEvent() {
-        $("a[href]").each(function(index, element){
-            var href = $(element).attr("href");
-
-            $(element).removeClass("is-current").attr("style", "");
-
-            if (href === window.location.href) {
-                $(element).addClass("is-current").attr("style", "pointer-events: none !important");
-            }
-        });
-    }
+    // function removeSameUrlLinkEvent() {
+    //     $("a[href]").each(function(index, element){
+    //         var href = $(element).attr("href");
+    //
+    //         $(element).removeClass("is-current").attr("style", "");
+    //
+    //         if (href === window.location.href) {
+    //             $(element).addClass("is-current").attr("style", "pointer-events: none !important");
+    //         }
+    //     });
+    // }
 
     // hero の高さを固定する
     function fixBgHeight() {
@@ -279,55 +332,6 @@
         }
     }
 
-    // slick
-    $('.p-page-home--movie').slick({
-        dots: true,
-        infinite: true,
-        arrows: false,
-        swipe: true,
-        centerMode: true,
-        centerPadding: '30%',
-        responsive: [
-            {
-              breakpoint: 992,
-              settings: {
-                centerPadding: '0px',
-              }
-            }
-        ]
-    });
 
-    // navi
-$('.menu-trigger').on('click',function(){
-    if($(this).hasClass('active')){
-        $(this).removeClass('active');
-        $('main').removeClass('open');
-        $('nav').removeClass('open');
-        $('.overlay').removeClass('open');
-    } else {
-        $(this).addClass('active');
-        $('main').addClass('open');
-        $('nav').addClass('open');
-        $('.overlay').addClass('open');
-    }
-});
-
-$('.overlay').on('click',function(){
-    if($(this).hasClass('open')){
-        $(this).removeClass('open');
-        $('.menu-trigger').removeClass('active');
-        $('main').removeClass('open');
-        $('nav').removeClass('open');
-    }
-});
-
-$('li > a').on('click',function(){
-    if($('.overlay').hasClass('open')){
-        $('.overlay').removeClass('open');
-        $('.menu-trigger').removeClass('active');
-        $('main').removeClass('open');
-        $('nav').removeClass('open');
-    }
-});
 
 })(jQuery);

@@ -39,22 +39,19 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" target="_blank">
+                    <a href="https://relibe.thebase.in/" target="_blank">
                         SHOP
                     </a>
                 </li>
             </ul>
             <div class="l-footer--cont__sns">
-                <div class="l-footer--cont__sns-item">
-                    <a href="#" target="_blank">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                </div>
-                <div class="l-footer--cont__sns-item">
-                    <a href="https://twitter.com/rosette_staff" target="_blank">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                </div>
+                <a class="l-footer--cont__sns-item" href="#" target="_blank">
+                    <i class="fab fa-youtube"></i>
+                </a>
+
+                <a class="l-footer--cont__sns-item" href="https://twitter.com/rosette_staff" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
             </div>
         </div>
     </section>
@@ -70,38 +67,27 @@
 </div>
 <? // navi_item ?>
 <nav>
-    <ul>
-        <li>
-            <a href="<?= get_bloginfo('url') ?>/">
-                HOME
-            </a>
-        </li>
-        <li>
-            <a href="<?= get_bloginfo('url') ?>/news/">
-                NEWS
-            </a>
-        </li>
-        <li>
-            <a href="<?= get_bloginfo('url') ?>/discography/">
-                DISCOGRAPHY
-            </a>
-        </li>
-        <li>
-            <a href="<?= get_bloginfo('url') ?>/member/">
-                MEMBER
-            </a>
-        </li>
-        <li>
-            <a href="<?= get_bloginfo('url') ?>/schedule">
-                SCHEDULE
-            </a>
-        </li>
-        <li>
-            <a href="#" target="_blank">
-                SHOP
-            </a>
-        </li>
-    </ul>
+    <a href="<?= get_bloginfo('url') ?>/">
+        HOME
+    </a>
+    <a href="<?= get_bloginfo('url') ?>/news/">
+        NEWS
+    </a>
+    <a href="<?= get_bloginfo('url') ?>/discography/">
+        DISCOGRAPHY
+    </a>
+    <a href="<?= get_bloginfo('url') ?>/member/">
+        MEMBER
+    </a>
+    <a href="<?= get_bloginfo('url') ?>/schedule/">
+        SCHEDULE
+    </a>
+    <a href="https://relibe.thebase.in/" target="_blank">
+        SHOP
+    </a>
+    <a href="<?= get_bloginfo('url') ?>/contact/">
+        CONTACT
+    </a>
 </nav>
 
 <div class="overlay"></div>

@@ -5,6 +5,11 @@
         <div class="p-ttl">
             CONTACT
         </div>
+        <div class="p-page-contact__wrap">
+            <?php while(have_posts()): the_post(); ?>
+              <?= the_content(); ?>
+            <?php endwhile; ?>
+        </div>
     </div>
 </div>
 

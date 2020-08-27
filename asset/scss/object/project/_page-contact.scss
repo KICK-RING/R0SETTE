@@ -1,6 +1,7 @@
+// main: ../../app.scss
+
 .p-page-contact {
-
-
+    font-size: 1rem;
 }
 
 // sm のみ
@@ -9,6 +10,14 @@
 @include media-breakpoint-up(md) {
 }
 @include media-breakpoint-up(lg) {
+    .p-page-contact {
+        font-size: 1.25rem;
+
+        &__wrap {
+            width: 800px;
+            margin: 80px auto 0;
+        }
+    }
 }
 @include media-breakpoint-up(xl) {
 }
